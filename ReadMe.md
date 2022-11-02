@@ -15,8 +15,12 @@ npm run build
 #zum Testen
 schematics .:hello-world --file-name=myFile.js
 
+cd ..
+ng new schematics-test
+
+#Im neu erstellten Projekt nutzen wir nun npm link, um unser Schematic-Projekt lokal als Dependency einzufügen. 
 npm link ../hello-world
-ng generate hello-world:hello-world
+ng generate hello-world:hello-world --fileName=test.js
 
 #
 ```
